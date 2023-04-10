@@ -1,0 +1,227 @@
+{
+    "openapi": "3.0.3",
+    "info":{ 
+        "version":"1.0.0",
+        "description": "Sentiment Analyst by miftah achmanda - fajri novitasari",
+        "contact": {
+            "name": "miftah achmanda - fajri novitasari"
+
+        }
+
+    },
+
+    "servers":[
+        {
+            "description": "API Server",
+            "url": "/"
+         }
+
+    ],
+
+
+
+    "paths":{
+        "/cnn":{
+            "get":{
+                "summary": "Get analyst sentiment using CNN",
+                "description": " ",
+                "responses": {
+                    "200":{
+                        "description": "Success"
+                    },
+                    "400":{
+                        "description": "Misunderstood"
+                    },
+                    "401":{
+                        "description": "Unauthorized"
+                    },
+                    "404":{
+                        "description": "Not Found"
+                    },
+                    "500":{
+                        "description": "Server Error"
+                    }
+                }
+            },
+            "post":{
+                "summary": "Post text to analyst sentiment using CNN",
+                "description": "Post a text",
+                "requestBody":{
+                    "required": true,
+                    "content": {
+                        "multipart/form-data":{
+                            "schema":{
+                                "type": "object",
+                                "properties": {
+                                    "text":{
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200":{
+                        "description": "Success"
+                    },
+                    "400":{
+                        "description": "Misunderstood"
+                    },
+                    "401":{
+                        "description": "Unauthorized"
+                    },
+                    "404":{
+                        "description": "Not Found"
+                    },
+                    "500":{
+                        "description": "Server Error"
+                    }
+                }
+            }
+        },
+
+        "/cnn/csv":{
+            "post":{
+                "summary": "Post file to analyst sentiment using CNN",
+                "description": "Post  file ",
+                "requestBody":{
+                    "required": true,
+                    "content": {
+                        "multipart/form-data":{
+                            "schema":{
+                                "type": "object",
+                                "properties": {
+                                    "file":{
+                                        "type": "string",
+                                        "format": "base64"
+                                    }
+                                }
+   
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200":{
+                        "description": "Success"
+                    },
+                    "400":{
+                        "description": "Misunderstood"
+                    },
+                    "401":{
+                        "description": "Unauthorized"
+                    },
+                    "404":{
+                        "description": "Not Found"
+                    },
+                    "500":{
+                        "description": "Server Error"
+                    }
+                }
+            }
+        },
+
+        "/lstm":{
+            "get":{
+                "summary": "Get analyst sentiment using LSTM",
+                "description": " ",
+                "responses": {
+                    "200":{
+                        "description": "Success"
+                    },
+                    "400":{
+                        "description": "Misunderstood"
+                    },
+                    "401":{
+                        "description": "Unauthorized"
+                    },
+                    "404":{
+                        "description": "Not Found"
+                    },
+                    "500":{
+                        "description": "Server Error"
+                    }
+                }
+            },
+            "post":{
+                "summary": "Post text to analyst sentiment using LSTM",
+                "description": "Post a text",
+                "requestBody":{
+                    "required": true,
+                    "content": {
+                        "multipart/form-data":{
+                            "schema":{
+                                "type": "object",
+                                "properties": {
+                                    "text":{
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200":{
+                        "description": "Success"
+                    },
+                    "400":{
+                        "description": "Misunderstood"
+                    },
+                    "401":{
+                        "description": "Unauthorized"
+                    },
+                    "404":{
+                        "description": "Not Found"
+                    },
+                    "500":{
+                        "description": "Server Error"
+                    }
+                }
+            }
+        },
+
+        "/lstm/csv":{
+            "post":{
+                "summary": "Post file to analyst sentiment using LSTM",
+                "description": "Post  file ",
+                "requestBody":{
+                    "required": true,
+                    "content": {
+                        "multipart/form-data":{
+                            "schema":{
+                                "type": "object",
+                                "properties": {
+                                    "file":{
+                                        "type": "string",
+                                        "format": "base64"
+                                    }
+                                }
+   
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200":{
+                        "description": "Success"
+                    },
+                    "400":{
+                        "description": "Misunderstood"
+                    },
+                    "401":{
+                        "description": "Unauthorized"
+                    },
+                    "404":{
+                        "description": "Not Found"
+                    },
+                    "500":{
+                        "description": "Server Error"
+                    }
+                }
+            }
+        }
+
+    }
+}
